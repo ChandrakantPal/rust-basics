@@ -1,6 +1,6 @@
 use std::env::{args, Args};
 
 fn main() {
-    let args = args();
+    let args: Args = args();
     println!("{:?}", args);
 }
