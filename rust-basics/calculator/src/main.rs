@@ -1,6 +1,7 @@
 use std::env::{args, Args};
 
 fn main() {
-    let args: Args = args();
-    println!("{:?}", args);
+    let mut args: Args = args();
+    let first = args.nth(0).unwrap();
+    println!("{:?}", first);
 }
