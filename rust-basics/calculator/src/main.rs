@@ -6,5 +6,5 @@ fn main() {
     let operator = args.nth(2).unwrap();
     let second = args.nth(3).unwrap();
 
-    println!("{:?}", first);
+    println!("{:?} {} {}", first, operator, second);
 }
