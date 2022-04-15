@@ -6,5 +6,6 @@ fn main() {
     let operator = args.nth(0).unwrap();
     let second = args.nth(0).unwrap();
 
+    let first_number = first.parse().unwrap();
     println!("{:?} {} {}", first, operator, second);
 }
