@@ -17,5 +17,7 @@ fn operate(operator: char, first_number: f32, second_number: f32) -> f32 {
         return first_number + second_number;
     } else if operator == '-' {
         return first_number - second_number;
+    } else if operator == '*' {
+        return first_number * second_number;
     }
 }
