@@ -11,3 +11,5 @@ fn main() {
 
     println!("{:?} {} {}", first, operator, second);
 }
+
+fn operate(operator: char, first_number: f32, second_number: f32) {}
