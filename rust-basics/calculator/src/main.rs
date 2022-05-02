@@ -8,6 +8,7 @@ fn main() {
 
     let first_number = first.parse::<f32>().unwrap();
     let second_number = second.parse::<f32>().unwrap();
+    let result = operate(operator, first_number, second_number);
 
     println!("{:?} {} {}", first, operator, second);
 }
