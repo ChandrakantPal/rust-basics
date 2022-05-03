@@ -27,4 +27,9 @@ fn operate(operator: char, first_number: f32, second_number: f32) -> f32 {
     }
 }
 
-fn output(first_number: f32, operator: char, second_number: f32, result: f32) {}
+fn output(first_number: f32, operator: char, second_number: f32, result: f32) -> String {
+    format!(
+        "{} {} {} = {}",
+        first_number, operator, second_number, result
+    )
+}
