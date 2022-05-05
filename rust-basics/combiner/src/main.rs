@@ -3,5 +3,5 @@ use args::Args;
 
 fn main() {
     let args = Args::new();
-    println!("Hello, world!");
+    println!("{:?}", args);
 }
