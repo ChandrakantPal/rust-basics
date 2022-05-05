@@ -12,9 +12,9 @@ pub struct Args {
 impl Args {
     pub fn new() -> Self {
         Self {
-            image_1: String::new(),
-            image_2: String::new(),
-            output: String::new(),
+            image_1: get_nth_arg(1),
+            image_2: get_nth_arg(2),
+            output: get_nth_arg(3),
         }
     }
 }
