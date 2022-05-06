@@ -6,4 +6,6 @@ fn main() {
     println!("{:?}", args);
 }
 
-fn find_image_from_path(path: String) {}
+fn find_image_from_path(path: String) {
+    let image_reader = Reader::open(path).unwrap();
+}
