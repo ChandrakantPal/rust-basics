@@ -1,5 +1,6 @@
 mod args;
 use args::Args;
+use image::{ io::Reader, DynamicImage, ImageFormat }
 
 fn main() {
     let args = Args::new();
