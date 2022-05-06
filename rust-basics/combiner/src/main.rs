@@ -4,6 +4,7 @@ use image::{ io::Reader, DynamicImage, ImageFormat }
 
 fn main() {
     let args = Args::new();
+    let (image_1, image_format_1) = find_image_from_path(args.image_1)
     println!("{:?}", args);
 }
 
