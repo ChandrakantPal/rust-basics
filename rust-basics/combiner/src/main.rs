@@ -1,13 +1,13 @@
 mod args;
 use args::Args;
-use image::{ io::Reader, DynamicImage, ImageFormat }
-use std::{ io::BufReader, fs::File }
+use image::{io::Reader, DynamicImage, ImageFormat};
+use std::{fs::File, io::BufReader};
 
 fn main() {
     let args = Args::new();
     let (image_1, image_format_1) = find_image_from_path(args.image_1);
     let (image_2, image_format_2) = find_image_from_path(args.image_2);
-    println!("{:?}", args);
+    // println!("{:?}", args);
 }
 
 fn find_image_from_path(path: String) -> (DynamicImage, ImageFormat) {
