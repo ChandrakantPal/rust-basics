@@ -3,6 +3,7 @@ use args::Args;
 use image::{io::Reader, DynamicImage, ImageFormat};
 use std::{fs::File, io::BufReader};
 
+#[derive(Debug)]
 enum ImageDataErrors {
     DifferentImageFormats,
 }
