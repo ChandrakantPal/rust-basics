@@ -37,5 +37,7 @@ fn standardise_size(image_1: DynamicImage, image_2: DynamicImage) -> (DynamicIma
 
     if image_2.dimensions() == (width, height) {
         (image_1.resize_exact(width, height, Triangle), image_2)
+    } else {
+        (image_1, image_2.resize_exact(width, height, Triangle))
     }
 }
