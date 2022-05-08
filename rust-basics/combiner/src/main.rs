@@ -33,4 +33,5 @@ fn get_smallest_dimension(dim_1: (u32, u32), dim_2: (u32, u32)) -> (u32, u32) {
 
 fn standardise_size(image_1: DynamicImage, image_2: DynamicImage) -> (DynamicImage, DynamicImage) {
     let (width, height) = get_smallest_dimension(image_1.dimensions(), image_2.dimensions());
+    println!("width: {}, height: {}\n", width, height);
 }
