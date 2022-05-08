@@ -17,6 +17,8 @@ fn main() -> Result<(), ImageDataErrors> {
     if image_format_1 != image_format_2 {
         return Err(ImageDataErrors::DifferentImageFormats);
     }
+
+    let (image_1, image_2) = standardise_size(image_1, image_2);
     Ok(())
 }
 
