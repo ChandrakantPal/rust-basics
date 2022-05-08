@@ -27,4 +27,5 @@ fn find_image_from_path(path: String) -> (DynamicImage, ImageFormat) {
 
 fn get_smallest_dimension(dim_1: (u32, u32), dim_2: (u32, u32)) -> (u32, u32) {
     let pix_1 = dim_1.0 * dim_1.1;
+    let pix_2 = dim_2.0 * dim_2.1;
 }
