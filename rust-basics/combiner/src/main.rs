@@ -1,6 +1,8 @@
 mod args;
 use args::Args;
-use image::{imageops::FilterType::Triangle, io::Reader, DynamicImage, ImageFormat};
+use image::{
+    imageops::FilterType::Triangle, io::Reader, DynamicImage, GenericImageView, ImageFormat,
+};
 use std::{fs::File, io::BufReader};
 
 #[derive(Debug)]
