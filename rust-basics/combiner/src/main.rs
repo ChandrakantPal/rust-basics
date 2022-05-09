@@ -10,6 +10,13 @@ enum ImageDataErrors {
     DifferentImageFormats,
 }
 
+struct FloatingImage {
+    width: u32,
+    height: u32,
+    data: Vec<u8>,
+    name: String,
+}
+
 fn main() -> Result<(), ImageDataErrors> {
     let args = Args::new();
     let (image_1, image_format_1) = find_image_from_path(args.image_1);
