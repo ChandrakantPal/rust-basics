@@ -17,6 +17,17 @@ struct FloatingImage {
     name: String,
 }
 
+impl FloatingImage {
+    fn new(width: u32, height: u32, name: String) -> Self {
+        FloatingImage {
+            width,
+            height,
+            data,
+            name,
+        }
+    }
+}
+
 fn main() -> Result<(), ImageDataErrors> {
     let args = Args::new();
     let (image_1, image_format_1) = find_image_from_path(args.image_1);
