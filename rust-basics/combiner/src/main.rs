@@ -19,10 +19,12 @@ struct FloatingImage {
 
 impl FloatingImage {
     fn new(width: u32, height: u32, name: String) -> Self {
+        let buffer_capacity = 3655744;
+        let buffer = Vec::with_capacity(buffer_capacity);
         FloatingImage {
             width,
             height,
-            data,
+            data: buffer,
             name,
         }
     }
