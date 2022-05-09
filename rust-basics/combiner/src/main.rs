@@ -3,6 +3,7 @@ use args::Args;
 use image::{
     imageops::FilterType::Triangle, io::Reader, DynamicImage, GenericImageView, ImageFormat,
 };
+use std::convert::TryInto;
 use std::{fs::File, io::BufReader};
 
 #[derive(Debug)]
@@ -20,7 +21,7 @@ struct FloatingImage {
 impl FloatingImage {
     fn new(width: u32, height: u32, name: String) -> Self {
         let buffer_capacity = height * width * 4;
-        let buffer = Vec::with_capacity(buffer_capacity);
+        let buffer = Vec::with_capacity(buffer_capacity.try_into().unwrap());
         FloatingImage {
             width,
             height,
