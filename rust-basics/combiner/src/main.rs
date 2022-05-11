@@ -88,3 +88,7 @@ fn alternate_pixels(vec_1: Vec<u8>, vec_2: Vec<u8>) -> Vec<u8> {
         i += 4;
     }
 }
+
+fn set_rgba(vec: Vec<u8>, start: usize, end: usize) -> Vec<u8> {
+    let mut rgba = Vec::new();
+}
