@@ -77,4 +77,9 @@ fn combine_images(image_1: DynamicImage, image_2: DynamicImage) -> Vec<u8> {
 fn alternate_pixels(vec_1: Vec<u8>, vec_2: Vec<u8>) -> Vec<u8> {
     // if vec_1.len() == 5, [0,0,0,0,0]
     let combine_data = vec![0u8; vec_1.len()];
+
+    let mut i = 0;
+    while i < vec_1.len() {
+        i += 4;
+    }
 }
