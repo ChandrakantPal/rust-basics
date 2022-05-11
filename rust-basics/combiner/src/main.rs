@@ -34,6 +34,8 @@ impl FloatingImage {
         if data.len() > self.data.capacity() {
             return Err(ImageDataErrors::BufferTooSmall);
         }
+        self.data = data;
+        Ok(())
     }
 }
 
