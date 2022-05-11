@@ -29,7 +29,11 @@ impl FloatingImage {
             name,
         }
     }
-    fn set_data(&mut self, data: Vec<u8>) -> Result<(), ImageDataErrors> {}
+    fn set_data(&mut self, data: Vec<u8>) -> Result<(), ImageDataErrors> {
+        if data.len() > self.data.capacity() {
+            return Err(ImageDataErrors::BufferTooSmall);
+        }
+    }
 }
 
 fn main() -> Result<(), ImageDataErrors> {
