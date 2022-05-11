@@ -76,10 +76,15 @@ fn combine_images(image_1: DynamicImage, image_2: DynamicImage) -> Vec<u8> {
 
 fn alternate_pixels(vec_1: Vec<u8>, vec_2: Vec<u8>) -> Vec<u8> {
     // if vec_1.len() == 5, [0,0,0,0,0]
-    let combine_data = vec![0u8; vec_1.len()];
+    let combined_data = vec![0u8; vec_1.len()];
 
     let mut i = 0;
     while i < vec_1.len() {
+        if i % 8 == 0 {
+            combined_data.splice(i..=i + 3, set_rgba(vec_1, i, i + 3));
+        } else {
+            combined_data.splice(i..=i + 3, set_rgba(vec_2, i, i + 3));
+        }
         i += 4;
     }
 }
