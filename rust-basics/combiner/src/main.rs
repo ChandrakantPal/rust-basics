@@ -29,6 +29,7 @@ impl FloatingImage {
             name,
         }
     }
+    fn set_data(&mut self, data: Vec<u8>) -> Result<(), ImageDataErrors> {}
 }
 
 fn main() -> Result<(), ImageDataErrors> {
