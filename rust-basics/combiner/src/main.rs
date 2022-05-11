@@ -94,8 +94,8 @@ fn set_rgba(vec: Vec<u8>, start: usize, end: usize) -> Vec<u8> {
     let mut rgba = Vec::new();
 
     for i in start..=end {
-        let val = match vec.get(i) {
-            Some(d) => d,
+        let val: u8 = match vec.get(i) {
+            Some(d) => *d,
             None => panic!("Index out of bounds"),
         };
         rgba.push(val);
