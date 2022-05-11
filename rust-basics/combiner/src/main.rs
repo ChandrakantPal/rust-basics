@@ -68,4 +68,6 @@ fn standardise_size(image_1: DynamicImage, image_2: DynamicImage) -> (DynamicIma
     }
 }
 
-fn combine_images(image_1: DynamicImage, image_2: DynamicImage) -> Vec<u8> {}
+fn combine_images(image_1: DynamicImage, image_2: DynamicImage) -> Vec<u8> {
+    let vec_1 = image_1.to_rgb8().into_vec();
+}
