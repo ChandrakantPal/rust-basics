@@ -67,3 +67,5 @@ fn standardise_size(image_1: DynamicImage, image_2: DynamicImage) -> (DynamicIma
         (image_1, image_2.resize_exact(width, height, Triangle))
     }
 }
+
+fn combine_images(image_1: DynamicImage, image_2: DynamicImage) -> Vec<u8> {}
