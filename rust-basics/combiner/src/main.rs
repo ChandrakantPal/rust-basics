@@ -57,15 +57,16 @@ fn main() -> Result<(), ImageDataErrors> {
     let combined_data = combine_images(image_1, image_2);
     output.set_data(combined_data)?;
 
-    image::save_buffer_with_format(
+    if let Err(e) = image::save_buffer_with_format(
         output.name,
         &output.data,
         output.width,
         output.height,
         image::ColorType::Rgb8,
         image_format_1,
-    )
-    .unwrap();
+    ) {
+        Err(ImageDataErrors::UnableToSaveImage(e))
+    };
     Ok(())
 }
 
