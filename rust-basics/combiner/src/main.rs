@@ -66,8 +66,9 @@ fn main() -> Result<(), ImageDataErrors> {
         image_format_1,
     ) {
         Err(ImageDataErrors::UnableToSaveImage(e))
-    };
-    Ok(())
+    } else {
+        Ok(())
+    }
 }
 
 fn find_image_from_path(path: String) -> Result<(DynamicImage, ImageFormat), ImageDataErrors> {
