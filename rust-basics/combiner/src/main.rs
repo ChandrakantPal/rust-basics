@@ -14,6 +14,7 @@ enum ImageDataErrors {
     UnableToReadImageFromPath(std::io::Error),
     UnableToFormatImage(String),
     UnableToDecodeImage(ImageError),
+    UnableToSaveImage(ImageError),
 }
 
 struct FloatingImage {
