@@ -69,7 +69,7 @@ fn main() -> Result<(), ImageDataErrors> {
     Ok(())
 }
 
-fn find_image_from_path(path: String) -> (DynamicImage, ImageFormat) {
+fn find_image_from_path(path: String) -> Result<(DynamicImage, ImageFormat), ImageDataErrors> {
     match Reader::open(path) {
         Ok(image_reader) => {
             if let Some(image_format) = image_reader.format() {
@@ -80,7 +80,6 @@ fn find_image_from_path(path: String) -> (DynamicImage, ImageFormat) {
             } else {
                 return Err(ImageDataErrors::UnableToFormatImage(path));
             }
-            (image, image_format)
         }
         Err(e) => Err(ImageDataErrors::UnableToReadImageFromPath(e)),
     };
