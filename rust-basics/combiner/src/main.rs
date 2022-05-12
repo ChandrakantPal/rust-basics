@@ -11,6 +11,7 @@ enum ImageDataErrors {
     DifferentImageFormats,
     BufferTooSmall,
     UnableToReadImageFromPath(std::io::Error),
+    UnableToFormatImage(String),
 }
 
 struct FloatingImage {
