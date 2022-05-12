@@ -5,7 +5,6 @@ use image::{
     ImageFormat,
 };
 use std::convert::TryInto;
-use std::{fs::File, io::BufReader};
 
 #[derive(Debug)]
 enum ImageDataErrors {
