@@ -70,19 +70,19 @@ fn main() -> Result<(), ImageDataErrors> {
 }
 
 fn find_image_from_path(path: String) -> Result<(DynamicImage, ImageFormat), ImageDataErrors> {
-    match Reader::open(path) {
+    match Reader::open(&path) {
         Ok(image_reader) => {
             if let Some(image_format) = image_reader.format() {
                 match image_reader.decode() {
                     Ok(image) => Ok((image, image_format)),
                     Err(e) => Err(ImageDataErrors::UnableToDecodeImage(e)),
-                };
+                }
             } else {
                 return Err(ImageDataErrors::UnableToFormatImage(path));
             }
         }
         Err(e) => Err(ImageDataErrors::UnableToReadImageFromPath(e)),
-    };
+    }
 }
 
 fn get_smallest_dimension(dim_1: (u32, u32), dim_2: (u32, u32)) -> (u32, u32) {
