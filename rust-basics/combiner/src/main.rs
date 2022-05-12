@@ -10,6 +10,7 @@ use std::{fs::File, io::BufReader};
 enum ImageDataErrors {
     DifferentImageFormats,
     BufferTooSmall,
+    UnableToReadImageFromPath(std::io::Error),
 }
 
 struct FloatingImage {
