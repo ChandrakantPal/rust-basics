@@ -1,7 +1,8 @@
 mod args;
 use args::Args;
 use image::{
-    imageops::FilterType::Triangle, io::Reader, DynamicImage, GenericImageView, ImageFormat,
+    imageops::FilterType::Triangle, io::Reader, DynamicImage, GenericImageView, ImageError,
+    ImageFormat,
 };
 use std::convert::TryInto;
 use std::{fs::File, io::BufReader};
@@ -12,6 +13,7 @@ enum ImageDataErrors {
     BufferTooSmall,
     UnableToReadImageFromPath(std::io::Error),
     UnableToFormatImage(String),
+    UnableToDecodeImage(ImageError),
 }
 
 struct FloatingImage {
